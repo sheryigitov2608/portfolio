@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-const FULL_TEXT = `lazizbek@portfolio:~$ whoami
+const FULL_TEXT = `lazizbek@resume:~$ whoami
 Исм: Шерйигитов Лазизбек
 Туғилган сана: 19.11.2008
 Касб: Фронтенд Дастурчи
@@ -11,7 +11,7 @@ const FULL_TEXT = `lazizbek@portfolio:~$ whoami
 Жойлашув: Ўзбекистон, Тошкент вил., Оққўрғон
 Ҳолат: Иш изламоқдаман (Open to Work)
 
-lazizbek@portfolio:~$ cat about.txt
+lazizbek@resume:~$ cat about.txt
 Мен замонавий веб-иловалар ва фойдаланувчига қулай интерфейслар яратишга ихтисослашган
 Фронтенд Дастурчиман. Кўплаб жамоавий ва шахсий лойиҳаларда ишлаганман.
 Асосан React, Next.js, TypeScript, Vue.js ва Tailwind CSS билан ишлайман.
@@ -20,12 +20,12 @@ lazizbek@portfolio:~$ cat about.txt
 СИ (AI) ёрдамида расм/видео генерация қилиш қўлимдан келади.
 Ҳозирда бэкенд дастурлаш ва мобил иловалар яратишни тўлиқ ўзлаштириш устида ишламоқдаман.
 
-lazizbek@portfolio:~$ ls skills/
+lazizbek@resume:~$ ls skills/
 [ФРОНТЕНД]: HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Vue.js, Tailwind CSS, Telegram Mini Apps
 [ҚЎШИМЧА_КЎНИКМАЛАР]: AI Расм/Видео Генерация, Видео Монтаж, Менторинг, Маъмурият
 [ЎРГАНМОҚДАМАН]: React Native, Python, FastAPI, Flask
 
-lazizbek@portfolio:~$ cat capabilities.txt
+lazizbek@resume:~$ cat capabilities.txt
 → Веб сайт ва лендинг пейж (landing page) яратиш
 → Responsive веб илова ишлаб чиқиш
 → React, Next.js ва Vue.js илова яратиш
@@ -41,7 +41,7 @@ lazizbek@portfolio:~$ cat capabilities.txt
 → AI ёрдамида расм ва видео генерация қилиш
 → Фронтенд йўналишида дарс ўтиш
 
-lazizbek@portfolio:~$ ls projects/
+lazizbek@resume:~$ ls projects/
 [ 01 — KASPRO ]
 Телеграм мини илова. Касаба уюшмаси аъзолари учун хизматларни рақамлаштириш.
 Стек: Next.js, TypeScript, Tailwind, PostgreSQL, Prisma.
@@ -58,7 +58,7 @@ lazizbek@portfolio:~$ ls projects/
 Таълимни бошқариш тизими (Давомат, молия, ҳисобот, чат).
 Стек: React, TypeScript, Next.js, Tailwind.
 
-lazizbek@portfolio:~$ cat experience.log
+lazizbek@resume:~$ cat experience.log
 [ IT АКАДЕМИЯСИ ]
 → Асосий Устоз (1.5 йил)
 → Маъмур (6 ой)
@@ -68,30 +68,30 @@ lazizbek@portfolio:~$ cat experience.log
 Кўплаб жамоавий (KasPro) ва шахсий (Slidea, MenuCraft, SmartEdu)
 лойиҳалар орқали амалий тажриба тўпланган.
 
-lazizbek@portfolio:~$ cat education.txt
+lazizbek@resume:~$ cat education.txt
 [ Тошкент Халқаро Молиявий Бошқарув ва Технологиялар Университети (TIFT) ]
 Йўналиш: Бакалавр (1-курс талабаси)
 Давр: 2026 — Ҳозиргача
 
-lazizbek@portfolio:~$ ls certificates/
+lazizbek@resume:~$ ls certificates/
 - Introduction to Generative AI (Google Cloud / Coursera, 2026)
 - Build AI Apps with ChatGPT, Dall-E, and GPT-4 (Scrimba / Coursera, 2026)
 - IoT Wireless & Cloud Computing (Yonsei University / Coursera, 2026)
 - Algorithm and Program Design (Huawei ICT Academy, 2026)
 - Фронтенд Дастурлаш (UNIPRO IT Академияси, 2024)
 
-lazizbek@portfolio:~$ cat languages.txt
+lazizbek@resume:~$ cat languages.txt
 Ўзбек тили: Она тили (Мукаммал)
 Рус тили: Ўрганмоқдаман
 Инглиз тили: Бошланғич
 
-lazizbek@portfolio:~$ ./contact.sh
+lazizbek@resume:~$ ./contact.sh
 GitHub: github.com/sheryigitov2608
 Telegram: t.me/laz1zbek2608
 Email: sheryigigtovlazizbek@gmail.com
 Телефон: +998 70 225 25 46
 
-lazizbek@portfolio:~$ `;
+lazizbek@resume:~$ `;
 
 const CHAR_SPEED = 15;
 
