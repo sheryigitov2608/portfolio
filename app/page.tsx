@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-const FULL_TEXT = `lazizbek@resume:~$ whoami
-Исм: Шерйигитов Лазизбек
+const FULL_TEXT = `Исм: Шерйигитов Лазизбек
 Туғилган сана: 19.11.2008
 Касб: Фронтенд Дастурчи
 Йўналиш: Веб Дастурлаш
