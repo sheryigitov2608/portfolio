@@ -7,15 +7,24 @@ const FULL_TEXT = `lazizbek@portfolio:~$ whoami
 Туғилган сана: 19.11.2008
 Касб: Фронтенд Дастурчи
 Йўналиш: Веб Дастурлаш
-Стек: React/Next.js/TypeScript/Vue.js
+Стек: React / Next.js / TypeScript / Vue.js
 Жойлашув: Ўзбекистон, Тошкент вил., Оққўрғон
 Ҳолат: Иш изламоқдаман (Open to Work)
+
 lazizbek@portfolio:~$ cat about.txt
-Мен замонавий веб-иловалар ва фойдаланувчига қулай интерфейслар яратишга ихтисослашган Фронтенд Дастурчиман. Кўплаб жамоавий ва шахсий лойиҳаларда ишлаганман. Асосан React, Next.js, TypeScript, Vue.js ва Tailwind CSS билан ишлайман. Шунингдек, Telegram ботлар (Mini Apps) яратишда ҳам тажрибам бор. Фронтенд йўналиши бўйича дарс бериш, видео монтаж, маъмурият (администраторлик) ва СИ (AI) ёрдамида расм/видео генерация қилиш қўлимдан келади. Ҳозирда бэкенд дастурлаш ва мобил иловалар яратишни тўлиқ ўзлаштириш устида ишламоқдаман.
+Мен замонавий веб-иловалар ва фойдаланувчига қулай интерфейслар яратишга ихтисослашган
+Фронтенд Дастурчиман. Кўплаб жамоавий ва шахсий лойиҳаларда ишлаганман.
+Асосан React, Next.js, TypeScript, Vue.js ва Tailwind CSS билан ишлайман.
+Шунингдек, Telegram ботлар (Mini Apps) яратишда ҳам тажрибам бор.
+Фронтенд йўналиши бўйича дарс бериш, видео монтаж, маъмурият (администраторлик) ва
+СИ (AI) ёрдамида расм/видео генерация қилиш қўлимдан келади.
+Ҳозирда бэкенд дастурлаш ва мобил иловалар яратишни тўлиқ ўзлаштириш устида ишламоқдаман.
+
 lazizbek@portfolio:~$ ls skills/
 [ФРОНТЕНД]: HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Vue.js, Tailwind CSS, Telegram Mini Apps
 [ҚЎШИМЧА_КЎНИКМАЛАР]: AI Расм/Видео Генерация, Видео Монтаж, Менторинг, Маъмурият
 [ЎРГАНМОҚДАМАН]: React Native, Python, FastAPI, Flask
+
 lazizbek@portfolio:~$ cat capabilities.txt
 → Веб сайт ва лендинг пейж (landing page) яратиш
 → Responsive веб илова ишлаб чиқиш
@@ -31,30 +40,57 @@ lazizbek@portfolio:~$ cat capabilities.txt
 → Хатоларни топиш ва тузатиш (Debugging)
 → AI ёрдамида расм ва видео генерация қилиш
 → Фронтенд йўналишида дарс ўтиш
+
 lazizbek@portfolio:~$ ls projects/
-./KASPRO: Telegram Mini App. Касаба уюшмаси аъзолари учун хизматларни рақамлаштириш. Стек: Next.js, TypeScript, Tailwind, PostgreSQL, Prisma.
-./SLIDEA: СИ ёрдамида тақдимот яратувчи веб платформа. PDF ва Телеграм бот интеграцияси. Стек: React, TypeScript, Next.js, Tailwind, FastAPI.
-./MENUCRAFT: Ресторан/кафелар учун рақамли меню платформаси. Стек: React, Next.js, TypeScript, Tailwind.
-./SMARTEDU: Таълимни бошқариш тизими (Давомат, молия, ҳисобот, чат). Стек: React, TypeScript, Next.js, Tailwind.
+[ 01 — KASPRO ]
+Телеграм мини илова. Касаба уюшмаси аъзолари учун хизматларни рақамлаштириш.
+Стек: Next.js, TypeScript, Tailwind, PostgreSQL, Prisma.
+
+[ 02 — SLIDEA ]
+СИ ёрдамида тақдимот яратувчи веб платформа. PDF ва Телеграм бот интеграцияси.
+Стек: React, TypeScript, Next.js, Tailwind, FastAPI.
+
+[ 03 — MENUCRAFT ]
+Ресторан ва кафелар учун рақамли меню платформаси.
+Стек: React, Next.js, TypeScript, Tailwind.
+
+[ 04 — SMARTEDU ]
+Таълимни бошқариш тизими (Давомат, молия, ҳисобот, чат).
+Стек: React, TypeScript, Next.js, Tailwind.
+
 lazizbek@portfolio:~$ cat experience.log
-[ IT АКАДЕМИЯСИ ]: Асосий Устоз (1.5 йил), Маъмур (6 ой), Ёрдамчи Ўқитувчи (6 ой)
-[ ШАХСИЙ РИВОЖЛАНИШ ]: Кўплаб жамоавий (KasPro) ва шахсий (Slidea, MenuCraft, SmartEdu) лойиҳалар орқали амалий тажриба тўпланган.
+[ IT АКАДЕМИЯСИ ]
+→ Асосий Устоз (1.5 йил)
+→ Маъмур (6 ой)
+→ Ёрдамчи Ўқитувчи (6 ой)
+
+[ ШАХСИЙ РИВОЖЛАНИШ ]
+Кўплаб жамоавий (KasPro) ва шахсий (Slidea, MenuCraft, SmartEdu)
+лойиҳалар орқали амалий тажриба тўпланган.
+
 lazizbek@portfolio:~$ cat education.txt
-[Тошкент Халқаро Молиявий Бошқарув ва Технологиялар Университети (TIFT)]
-Йўналиш: Бакалавр (1-курс талабаси) | Давр: 2026 — Ҳозиргача
+[ Тошкент Халқаро Молиявий Бошқарув ва Технологиялар Университети (TIFT) ]
+Йўналиш: Бакалавр (1-курс талабаси)
+Давр: 2026 — Ҳозиргача
+
 lazizbek@portfolio:~$ ls certificates/
 - Introduction to Generative AI (Google Cloud / Coursera, 2026)
 - Build AI Apps with ChatGPT, Dall-E, and GPT-4 (Scrimba / Coursera, 2026)
 - IoT Wireless & Cloud Computing (Yonsei University / Coursera, 2026)
 - Algorithm and Program Design (Huawei ICT Academy, 2026)
 - Фронтенд Дастурлаш (UNIPRO IT Академияси, 2024)
+
 lazizbek@portfolio:~$ cat languages.txt
-Ўзбек тили: Она тили (Мукаммал) | Рус тили: Ўрганмоқдаман | Инглиз тили: Бошланғич
+Ўзбек тили: Она тили (Мукаммал)
+Рус тили: Ўрганмоқдаман
+Инглиз тили: Бошланғич
+
 lazizbek@portfolio:~$ ./contact.sh
 GitHub: github.com/sheryigitov2608
 Telegram: t.me/laz1zbek2608
 Email: sheryigigtovlazizbek@gmail.com
 Телефон: +998 70 225 25 46
+
 lazizbek@portfolio:~$ `;
 
 const CHAR_SPEED = 15;
