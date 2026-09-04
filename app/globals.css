@@ -10,8 +10,8 @@ html, body {
   background: #000;
   color: #00ff41;
   font-family: 'Consolas', 'Lucida Console', 'Courier New', monospace;
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 11.5px;
+  line-height: 1.25;
   min-height: 100vh;
 }
 
@@ -22,8 +22,8 @@ html, body {
 
 .cursor {
   display: inline-block;
-  width: 8px;
-  height: 14px;
+  width: 7px;
+  height: 12px;
   background: #00ff41;
   animation: blink 1s step-end infinite;
   vertical-align: middle;
