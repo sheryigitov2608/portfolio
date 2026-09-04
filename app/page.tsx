@@ -114,6 +114,17 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const lastShown = localStorage.getItem('typingLastShown');
+    const now = Date.now();
+    
+    if (lastShown && now - parseInt(lastShown) < 10 * 60 * 1000) {
+      setDisplayed(FULL_TEXT);
+      setDone(true);
+      return;
+    }
+    
+    localStorage.setItem('typingLastShown', now.toString());
+
     const interval = setInterval(() => {
       if (indexRef.current >= FULL_TEXT.length) {
         clearInterval(interval);
