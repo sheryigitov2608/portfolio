@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000;
+  color: #00ff41;
+  font-family: 'Consolas', 'Lucida Console', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #00ff41;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+::selection {
+  background: #00ff41;
+  color: #000;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #00ff41; }
