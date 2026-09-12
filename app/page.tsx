@@ -96,7 +96,8 @@ const CHAR_SPEED = 15;
 
 export default function Home() {
   const [displayed, setDisplayed] = useState('');
-  const [done, setDone] = useState(false);
+  const [terminalState, setTerminalState] = useState<'TYPING' | 'PROMPTING' | 'FINISHED'>('TYPING');
+  const [promptAnswer, setPromptAnswer] = useState('');
   const indexRef = useRef(0);
   const bottomRef = useRef<HTMLDivElement>(null);
   const userScrolledUp = useRef(false);
@@ -119,7 +120,7 @@ export default function Home() {
     
     if (lastShown && now - parseInt(lastShown) < 10 * 60 * 1000) {
       setDisplayed(FULL_TEXT);
-      setDone(true);
+      setTerminalState('PROMPTING');
       return;
     }
     
@@ -128,7 +129,7 @@ export default function Home() {
     const interval = setInterval(() => {
       if (indexRef.current >= FULL_TEXT.length) {
         clearInterval(interval);
-        setDone(true);
+        setTerminalState('PROMPTING');
         return;
       }
       indexRef.current += 1;
@@ -141,7 +142,33 @@ export default function Home() {
     if (!userScrolledUp.current) {
       bottomRef.current?.scrollIntoView({ block: 'nearest' });
     }
-  }, [displayed]);
+  }, [displayed, terminalState, promptAnswer]);
+
+  useEffect(() => {
+    if (terminalState !== 'PROMPTING') return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore modifier keys or long keys like Shift/Enter
+      if (e.ctrlKey || e.altKey || e.metaKey || e.key.length !== 1) return;
+      
+      const key = e.key;
+      setPromptAnswer(key);
+      setTerminalState('FINISHED');
+      
+      if (key.toLowerCase() === 'y') {
+        // Trigger download
+        const link = document.createElement('a');
+        link.href = '/resume.pdf';
+        link.download = 'Lazizbek_Sheryigitov_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [terminalState]);
 
   const renderText = () => {
     const lines = displayed.split('\n');
@@ -150,7 +177,7 @@ export default function Home() {
       return (
         <span key={i}>
           {line}
-          {isLast && !done && <span className="cursor" />}
+          {isLast && terminalState === 'TYPING' && <span className="cursor" />}
           {!isLast && <br />}
         </span>
       );
@@ -167,7 +194,21 @@ export default function Home() {
       }}
     >
       {renderText()}
-      {done && <span className="cursor" />}
+      {terminalState === 'PROMPTING' && (
+        <span>
+          ./download_resume.sh<br/>
+          Резюмени юклаб олишни истайсизми? [Y/n]: <span className="cursor" />
+        </span>
+      )}
+      {terminalState === 'FINISHED' && (
+        <span>
+          ./download_resume.sh<br/>
+          Резюмени юклаб олишни истайсизми? [Y/n]: {promptAnswer}<br/>
+          {promptAnswer.toLowerCase() === 'y' ? '[OK] Резюме юклаб олинмоқда...' : '[CANCEL] Бекор қилинди.'}<br/>
+          <br/>
+          lazizbek@resume:~$ <span className="cursor" />
+        </span>
+      )}
       <div ref={bottomRef} />
     </div>
   );
